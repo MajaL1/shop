@@ -32,6 +32,12 @@ angular.module('app').config(function($stateProvider, $urlRouterProvider){
 		templateUrl: "templates/cart-template.html"
 	});
 
+	$stateProvider.state('error',
+	{
+		url: '/error',
+		templateUrl: "templates/error-template.html"
+	});
+
 	/*$stateProvider.state('parent',
 	{
 		url: '/parent',
