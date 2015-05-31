@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 
   <script src="../bower_components/angular/angular.js"></script>
+   <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
   <script src="js/all.js"></script>
 
@@ -22,7 +23,25 @@
   		<div class="col-xs-12 jumbotron">
   			<h1>MAJAaa</h1>
   			
+     <!-- prikazemo login template --> 
 			<login-template ng-show="false">1234</login-template>
+  
+      <div class="well">
+                <!-- Navbar -->
+                <a ui-sref="login">Login</a>
+                <a ui-sref="error">Error</a>
+
+                <a ui-sref="categories">categories</a>
+                <a ui-sref="error">sale</a>
+                <a ui-sref="error">cart</a>
+               
+    </div>
+
+    <!-- Load all templates and templateUrls from states into this directive -->
+            <ui-view></ui-view>
+
+
+          
 
   		</div>
   	</div>

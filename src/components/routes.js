@@ -11,22 +11,33 @@ angular.module('app').config(function($stateProvider, $urlRouterProvider){
 
 	$stateProvider.state('login',
 	{
-		url: '/login',
-		template: 'dist/login-template.html'
+		url: "/login",
+		templateUrl: "templates/login-template.html"
 	});
 
-	/*$stateProvider.state('error',
+	$stateProvider.state('categories',
 	{
-		url: '/error',
-		template: '<h2>Error 404</h2>'
+		url: '/categories',
+		templateUrl: "templates/categories-template.html"
 	});
 
-	$stateProvider.state('parent',
+	$stateProvider.state('sale',
+	{
+		url: '/sale',
+		templateUrl: "templates/sale-template.html"
+	});
+	$stateProvider.state('cart',
+	{
+		url: '/cart',
+		templateUrl: "templates/cart-template.html"
+	});
+
+	/*$stateProvider.state('parent',
 	{
 		url: '/parent',
 		template: '<h1>Parent state <span class="text-muted"><small>Has an additional ui-view.</small></span></h1><ui-view></ui-view>'
-	});
-
+	});*/
+/*
 	$stateProvider.state('parent.child', 
 	{
 		url: '/child',

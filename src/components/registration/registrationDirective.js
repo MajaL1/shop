@@ -1,8 +1,8 @@
-angular.module('app').directive('appExample', function(){
+angular.module('app').directive('registrationTemplate', function(){
 	return {
 		restrict: 'E',
 		scope:{},
-		controller: 'ExampleController',
-		templateUrl: 'templates/example-template.html'
+		controller: 'RegistrationController',
+		templateUrl: 'templates/registration-template.html'
 	};
 });
