@@ -1,4 +1,4 @@
-angular.module('app').directive('appExample', function(){
+angular.module('app').directive('searchTemplate', function(){
 	return {
 		restrict: 'E',
 		scope:{},

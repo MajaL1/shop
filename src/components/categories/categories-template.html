@@ -1,7 +1,10 @@
 <div class="well">
-	<h4>Example directive - categories template</h4>
-	
-	<span class="text-muted">Data: </span>
-	<p>{{ example }}</p>
+
+	<div class="container" ng-controller="CategoriesController">
+		 <div class="well" ng-repeat="category in categories track by $index" >
+	              <h2>{{ category.category }}</h2>
+	   
+	     </div>
+	</div>
 
 </div>
