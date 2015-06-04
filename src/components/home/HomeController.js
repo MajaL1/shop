@@ -1,5 +1,5 @@
-angular.module('app').controller('ExampleController', function($scope){
+angular.module('app').controller('HomeController', function($scope){
 
-	$scope.example = 'Example from ExampleController';
+	$scope.example = 'Example from HomeController';
 
 });

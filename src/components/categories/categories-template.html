@@ -1,10 +1,11 @@
 <div class="well">
 
 	<div class="container" ng-controller="CategoriesController">
-		 <div class="well" ng-repeat="category in categories track by $index" >
-	              <h2>{{ category.category }}</h2>
-	   
-	     </div>
+		 <span ng-repeat="category in categories track by $index" >
+		 <a href="" ng-click="showProductsByCategory(category.id)">{{ category.category+"&nbsp;&nbsp;&nbsp;"}}</a>
+	             
+	   	</span>	
+	      
 	</div>
 
 </div>
