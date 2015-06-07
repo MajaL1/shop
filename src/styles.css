@@ -5,16 +5,23 @@ body {
 
 .header-img {
 	display:block;
-	background: url("img/toystore_header.jpg") 0 0 no-repeat;
+	/*background: url("img/toystore_header.jpg") 0 0 no-repeat; */
+
+	background-color: #e01e41;
 	background-repeat: no-repeat;
 	margin: 0px;
-	height: 50px;
+	height: 120px;
 	background-position:cover;
+	color:white;
+}
+.navbar.page-header{
+	font-size:12px;
+	color: white;
 }
 
 .footer {
-  height: 60px;
-  padding:20px;
+  height: 30px;
+  padding: 5px;
   text-align:center;
   /*background-color: #dd042b;*/
   background: -webkit-linear-gradient(#dd042b, #e22b4c); /* For Safari 5.1 to 6.0 */
@@ -38,29 +45,54 @@ body {
  .navbar-nav>li>a { padding-top: 10px; padding-bottom: 10px; }
 .navbar-brand { padding: 10px 15px; } 
 
-
-.navbar-nav > li > a {
+.categories-nav {
+	margin-left:auto;
+    margin-right:auto; 
+    max-width :70%;   
+    float:none !important;
+}
+.categories-nav.navbar-nav > li > a {
         margin-top: 10px;
         margin-bottom: 10px;
         padding-left: 15px;
         padding-right: 15px;
         padding-top: 5px;
         line-height: 20px;
+        color:white;
 }
-.navbar-nav > li {
-        display:block;
+.categories-nav.navbar-nav > li:nth-child(1n+1) {  
+  background-color: #00a0ee;
 }
-
-.navbar-nav > ul  :nth-child(1n+1) {  
-  background-color: #d8007b;
-}
-.navbar-nav > ul  :nth-child(2n+2) {  
+.categories-nav.navbar-nav > li:nth-child(1n+2) {  
   background-color: #73c026;
 }
-.navbar-nav > ul  :nth-child(3+3) {  
+.categories-nav.navbar-nav > li:nth-child(1n+3) {  
   background-color: #de3f19;
 }
-.navbar-nav > ul :nth-child(4n+4) {  
+.categories-nav.navbar-nav > li:nth-child(1n+4) {  
   background-color: #55068e;
+}
+
+.login-box {
+ float: right;
+ padding: 10px 30px 20px 0px;
+}
+.login-box a{
+
+ padding-right: 30px;
+ color:white;
+}
+
+.search-box {
+ float: right;
+ clear: right;
+}
+
+.cart{
+	padding-right: 70px;
+	font-size:25px;
+}
+.cart a{
+	color:white;
 }
 

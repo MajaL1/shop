@@ -1,6 +1,6 @@
 
 <div ng-controller="CategoriesController">
-	<ul class="nav navbar-nav">
+	<ul class="nav navbar-nav categories-nav">
 			<li ng-repeat="category in categories track by $index" >
 					 <a href="" ng-click="showProductsByCategory(category.id)">{{ category.category+"&nbsp;&nbsp;&nbsp;"}}</a> 	  	             
 			</li>
