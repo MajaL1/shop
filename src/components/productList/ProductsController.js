@@ -1,12 +1,23 @@
 angular.module('app').controller('ProductsController', function($scope, $rootScope){
-	console.log("ProductsController------");
+	
+	//console.log("ROOTSCOPE: ProductsList: "+$rootScope.productList);
+	//$scope.productList = $rootScope.productList;
+	$scope.$on("updateProductsController", function(event, productList) {
+	    $scope.productList = productList;
+	      
+  	});
 
-	console.log("ROOTSCOPE: ProductsList: "+$rootScope.productList);
+  	$scope.addToCart = function(){
+  		// spremeni stevilo izdelkov desno zgoraj
 
-	 $scope.$on("updateProductsController", function(event, productsList) {
-      $scope.productsList = $rootScope.productsList;
+  	}
+  	$scope.showDetail = function(product){
+  		// spremeni stevilo izdelkov desno zgoraj
 
-      console.log("BROADCAST EVENT: "+productsList);
-      });
+  		$rootScope.showProductsList = false;
+  		$rootScope.showProductDetail = true;
+  		$rootScope.$broadcast('getProductDetail', product);
+
+  	}
 
 });

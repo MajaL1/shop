@@ -31,7 +31,7 @@
   <div class ='pull-right search-box clearfix'>     
         <cart-template></cart-template>
   </div>
-  <!--       <a ui-sref="login">Login</a>
+  <!--    <a ui-sref="login">Login</a>
           <a ui-sref="registration">Registration</a>
           <search-template></search-template>
           <h1>Toy store</h1> -->
@@ -59,8 +59,9 @@
     <!-- TODO: Floataj linke levo -->
 
 			<home-template ng-show="false"></home-template>
-     <!--<carousel-template ng-show="true"></carousel-template>
-      <products-template ng-show="false"></products-template>
+     <carousel-template ng-show="false"></carousel-template>
+      <products-template ng-show="showProductsList"></products-template>
+      <product-detail-template ng-show="showProductDetail"></product-detail-template>
   
         <div class="well">
                   <a ui-sref="categories">categories</a>
