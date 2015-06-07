@@ -7,8 +7,12 @@ angular.module('app').controller('ProductsController', function($scope, $rootSco
 	      
   	});
 
-  	$scope.addToCart = function(){
+  	$scope.addToCart = function(product, quantity){
   		// spremeni stevilo izdelkov desno zgoraj
+
+  		$rootScope.showProductDetail = true;
+  		$rootScope.$broadcast('addToCart', product, quantity);
+
 
   	}
   	$scope.showDetail = function(product){

@@ -1,10 +1,24 @@
 <div class="well">
 
 	<h4>Product detail</h4>
-	<p><a href="#" ng-click="addToCart(product.id)" class="btn btn-success" role="button">ADD</a>
 	
+	<h2>{{product.name}}</h2>
+
+	<h5>{{product.brand}}</h5>
+	<img class="hidden-xs thumbnail-img" ng-src="{{ product.image }}" alt=""/>
 	<div class="well">
 		{{product.description}}
 	</div>
+	<p>Price: {{product.price}} €</p>
+	<p>Quantity: </p>
+      	<select class="form-control">
+	        <option>1</option>
+	        <option>2</option>
+	        <option>3</option>
+	        <option>4</option>
+      	</select>
+
+
+	<p><a href="#" ng-click="addToCart(product, quantity)" class="btn btn-success" role="button">ADD TO CART</a>
 	 
 </div>

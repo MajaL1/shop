@@ -106,4 +106,9 @@ body {
 .price{
   text-align: center;
 }
+.form-control {
+  width: 40px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
 
