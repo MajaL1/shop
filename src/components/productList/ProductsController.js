@@ -11,6 +11,8 @@ angular.module('app').controller('ProductsController', function($scope, $rootSco
   		// spremeni stevilo izdelkov desno zgoraj
 
   		$rootScope.showProductDetail = true;
+  		$rootScope.totalQuantity = $scope.quantity|0 + quantity|0;
+  		//$rootScope.totalQuantity = 5;
   		$rootScope.$broadcast('addToCart', product, quantity);
 
 
