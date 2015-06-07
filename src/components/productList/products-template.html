@@ -1,7 +1,12 @@
 <div class="well">
-	<h4>Example directive</h4>
-	
-	<span class="text-muted">Data: </span>
-	<p>{{ example }}</p>
+	<h2>Products-</h2>
+	<div>{{categories}}</div>
+	<div class="container" ng-controller="ProductsController">
+		 <span ng-repeat="product in productsList track by $index" >
+		 <a href="" ng-click="showDetail(product.id)">{{ product.name+"&nbsp;&nbsp;&nbsp;"}}</a>
+	             
+	   	</span>	
+	      
+	</div>
 
 </div>

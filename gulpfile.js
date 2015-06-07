@@ -14,7 +14,17 @@ gulp.task('move', function(){
 	.pipe(gulp.dest('./dist'))
 	//	Notify the user
 	//.pipe(notify('Moved index.html'));
-
+	
+	//	Set the source
+	gulp.src(['./src/styles.css'])
+	//	Pipe it and store it in the dist folder
+	.pipe(gulp.dest('./dist'))
+	
+	//	Set the source
+	gulp.src(['./src/img/*.jpg'])
+	//	Pipe it and store it in the dist folder
+	.pipe(gulp.dest('./dist/img'))
+	
 
 	// Set the source. You can exclude files with !
 	gulp.src(['!./src/index.html', './src/**/*.html'])
@@ -61,6 +71,7 @@ gulp.task('watch', ['serve'], function(){
 	//	anytime a .js file changes
 	gulp.watch(['./src/**/*.js'], ['scripts']);
 	gulp.watch(['./src/**/*.html'], ['move']);
+	gulp.watch(['./src/**/*.css'], ['move']);
 });
 
 

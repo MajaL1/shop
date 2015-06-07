@@ -1,4 +1,4 @@
-angular.module('app').directive('productsDirective', function(){
+angular.module('app').directive('productsTemplate', function(){
 	return {
 		restrict: 'E',
 		scope:{},

@@ -1,8 +1,9 @@
 angular.module('app').directive('categoriesTemplate', function(){
 	return {
 		restrict: 'E',
-		scope:{},
+		scope: {},
 		controller: 'CategoriesController',
-		templateUrl: 'templates/categories-template.html'
+		templateUrl: 'templates/categories-template.html',
+		//template: 'categories: {{ categories }}'
 	};
 });

@@ -9,7 +9,12 @@
 
   <script src="../bower_components/angular/angular.js"></script>
    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-resource.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-resource.js"></script>
+   <link rel="stylesheet" href="https://bootswatch.com/readable/bootstrap.min.css">
+  <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+ 
+  <link rel="stylesheet" href="styles.css">
   <script src="js/all.js"></script>
 
   <!--[if lt IE 9]>
@@ -17,44 +22,65 @@
   <![endif]-->
 </head>
 
+<div class="navbar page-header header-img">
+
+  <div class = 'pull-right md-col-2'>
+       <a ui-sref="login">Login</a>
+  </div>
+  <div class ='pull-right md-col-2'>
+       <a ui-sref="registration">Register</a>
+  </div> 
+  <div class ='pull-right md-col-2'>     
+        <search-template></search-template>
+  </div>
+  <!--       <a ui-sref="login">Login</a>
+          <a ui-sref="registration">Registration</a>
+          <search-template></search-template>
+          <h1>Toy store</h1> -->
+</div>
+
+<nav class="navbar navbar-default navbar-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
+    </div>
+    <div>
+      
+        <categories-template ng-show="true"></categories-template>
+        <!--<li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li> 
+        <li><a href="#">Page 3</a></li> -->
+      
+    </div>
+  </div>
+</nav>
+
 <body ng-app="app">
   <div class="container">
 
-    <div class="row banner">
-      <div class="col-xs-12 jumbotron">
+    <!-- TODO: Floataj linke levo -->
 
-        <!-- TODO: Floataj linke levo -->
-        <a ui-sref="login">Login</a>
-        <a ui-sref="registration">Registration</a>
-        <search-template></search-template>
-
-
-        <h1>Maja's toy store</h1>
-      </div> 
-    </div>       
-
-  	<div class="row">
-
-			<home-template ng-show="true"></home-template>
+			<home-template ng-show="false"></home-template>
+     <!--<carousel-template ng-show="true"></carousel-template>
+      <products-template ng-show="false"></products-template>
   
-      <div class="well">
-                <!-- Navbar -->
-                
-                <a ui-sref="categories">categories</a>
-                <a ui-sref="sale">sale</a>
-                <a ui-sref="cart">cart</a>
-               
-      </div>
+        <div class="well">
+                  <a ui-sref="categories">categories</a>
+                  <a ui-sref="sale">sale</a>
+                  <a ui-sref="cart">cart</a>  
+        </div>
+
+        
 
     <!-- Load all templates and templateUrls from states into this directive -->
             <ui-view></ui-view>
-    </div>
+    
 
-    <div class="row"> 
-                  <a ui-sref="deliveryPolicy">Delivery policy </a>
-                  <a ui-sref="termsAndConditions">Terms and conditions </a>
-                  <a ui-sref="privacyAndCookies">Privacy and cookies </a>
-    </div>
-</div>
+    <div class="footer navbar-fixed-bottom">
+                    <a ui-sref="deliveryPolicy">Delivery policy </a>
+                    <a ui-sref="termsAndConditions">Terms and conditions </a>
+                    <a ui-sref="privacyAndCookies">Privacy and cookies </a>
+    </div> 
+  </div>
 </body>
 </html>

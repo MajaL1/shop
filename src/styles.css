@@ -1,0 +1,66 @@
+body {
+	font-family: "Trebuchet MS","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	display:center;
+}
+
+.header-img {
+	display:block;
+	background: url("img/toystore_header.jpg") 0 0 no-repeat;
+	background-repeat: no-repeat;
+	margin: 0px;
+	height: 50px;
+	background-position:cover;
+}
+
+.footer {
+  height: 60px;
+  padding:20px;
+  text-align:center;
+  /*background-color: #dd042b;*/
+  background: -webkit-linear-gradient(#dd042b, #e22b4c); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#dd042b, #e22b4c); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#dd042b, #e22b4c); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#dd042b, #e22b4c); /* Standard syntax */
+
+}
+.footer a{
+  padding-right:20px;
+  color:white;
+  font-size:13px;
+
+}
+.navbar-top {
+  height: 40px;
+}
+.navbar-nav ul{
+	display:inline-block;
+}
+ .navbar-nav>li>a { padding-top: 10px; padding-bottom: 10px; }
+.navbar-brand { padding: 10px 15px; } 
+
+
+.navbar-nav > li > a {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        line-height: 20px;
+}
+.navbar-nav > li {
+        display:block;
+}
+
+.navbar-nav > ul  :nth-child(1n+1) {  
+  background-color: #d8007b;
+}
+.navbar-nav > ul  :nth-child(2n+2) {  
+  background-color: #73c026;
+}
+.navbar-nav > ul  :nth-child(3+3) {  
+  background-color: #de3f19;
+}
+.navbar-nav > ul :nth-child(4n+4) {  
+  background-color: #55068e;
+}
+
