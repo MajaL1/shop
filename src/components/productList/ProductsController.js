@@ -1,16 +1,26 @@
 angular.module('app').controller('ProductsController', function($scope, $rootScope){
 	
-	//console.log("ROOTSCOPE: ProductsList: "+$rootScope.productList);
-	//$scope.productList = $rootScope.productList;
 	$scope.$on("updateProductsController", function(event, productList) {
 	    $scope.productList = productList;
 	      
   	});
 
+  //$scope.stockRange = [1,2,3,4,5];
+
+    $scope.stockRange = function(product){
+        var stockArray = [];
+        var stock = product.stock;
+        for(var i = 1; i<= stock; i++){
+          stockArray.push(i);
+        }
+        return stockArray;
+    }
+
   	$scope.addToCart = function(product, quantity){
   		// spremeni stevilo izdelkov desno zgoraj
 
   		$rootScope.showProductDetail = true;
+
   		$rootScope.totalQuantity = $scope.quantity|0 + quantity|0;
   		//$rootScope.totalQuantity = 5;
   		$rootScope.$broadcast('addToCart', product, quantity);

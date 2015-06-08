@@ -10,15 +10,12 @@
 		{{product.description}}
 	</div>
 	<p>Price: {{product.price}} €</p>
-	<p>Quantity: </p>
-      	<select class="form-control">
-	        <option>1</option>
-	        <option>2</option>
-	        <option>3</option>
-	        <option>4</option>
-      	</select>
+	<span ng-show="product.onSale">
+			<p>Quantity: {{ selectedObject }}</p>
+				<p>AAAA{{stockRange}}</p>
 
+					<select ng-options="item for item in stockRange" class="form-control" ng-model="stockRange" ng-required="true">{{item}}</select>
+				    <p><a href="#" ng-click="addToCart(product, quantity)" class="btn btn-success" role="button">ADD TO CART</a>
+	</span>
 
-	<p><a href="#" ng-click="addToCart(product, quantity)" class="btn btn-success" role="button">ADD TO CART</a>
-	 
 </div>
