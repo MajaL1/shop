@@ -4,13 +4,17 @@ angular.module('app').controller('ProductDetailController', function($scope){
   	});
 
   	$scope.stockRange = function(product){
-        var stockArray = [];
-        var stock = product.stock;
-        for(var i = 1; i<= stock; i++){
-          stockArray.push(i);
-        }
-        console.log("STOCK ARRAY::", stockArray);
-        return stockArray;
+  		if(product){
+	        var stockArray = [];
+	        console.log("STOCK ::", product);
+	        var stock = product.stock;
+
+	        for(var i = 1; i<= stock; i++){
+	          stockArray.push(i);
+	        }
+	        console.log("STOCK ARRAY::", stockArray);
+	        return stockArray;
+    }
     }
 
 });

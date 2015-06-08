@@ -8,12 +8,14 @@ angular.module('app').controller('ProductsController', function($scope, $rootSco
   //$scope.stockRange = [1,2,3,4,5];
 
     $scope.stockRange = function(product){
+      if(product){
         var stockArray = [];
         var stock = product.stock;
         for(var i = 1; i<= stock; i++){
           stockArray.push(i);
         }
         return stockArray;
+      }
     }
 
   	$scope.addToCart = function(product, quantity){

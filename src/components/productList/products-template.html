@@ -10,10 +10,10 @@
 			        <h3 class="price">€ {{product.price}}</h3>
 			        <p class="price">{{product.onSale}}</p>
 
-			        <span ng-show="product.onSale" ng-model="selectedObject">
-				        <p>Quantity: {{ selectedObject }}</p>
+			        <span ng-show="product.onSale" >
+				        <p>Quantity: {{ selectedQuantity }}</p>
 
-					    <select ng-options="item for item in stockRange(product)" class="form-control" ng-model="selectedObject" ng-required="true">{{item}}</select>
+					    <select ng-options="item for item in stockRange(product)" class="form-control" ng-model="selectedQuantity" ng-required="true">{{item}}</select>
 				        <p><a href="#" ng-click="addToCart(product.id)" class="btn btn-success" role="button">ADD</a>
 			       	</span>
 
