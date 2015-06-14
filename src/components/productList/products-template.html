@@ -8,13 +8,19 @@
 			      <img class="hidden-xs thumbnail-img" ng-src="{{ product.image }}" alt=""/>
 			      <div class="caption">
 			        <h3 class="price">€ {{product.price}}</h3>
-			        <p class="price">{{product.onSale}}</p>
 
-			        <span ng-show="product.onSale" >
+			         <div ng-show="product.onSale">
+				        Available
+				    </div>
+				    <div ng-show="!product.onSale">
+				        Not available
+				    </div>
+			       
+			        <span ng-show="product.onSale">
 				        <p>Quantity: {{ selectedQuantity }}</p>
 
 					    <select ng-options="item for item in stockRange(product)" class="form-control" ng-model="selectedQuantity" ng-required="true">{{item}}</select>
-				        <p><a href="#" ng-click="addToCart(product.id)" class="btn btn-success" role="button">ADD</a>
+				        <p><a href="#" ng-click="addToCart(product, selectedQuantity)" class="btn btn-success" role="button">ADD</a>
 			       	</span>
 
 			        <a href="#" ng-click="showDetail(product)"class="btn btn-primary" role="button">INFO</a></p>

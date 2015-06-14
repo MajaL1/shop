@@ -1,6 +1,6 @@
 <div class ="cart">
-	<a href="#">
+	<a href="#" ng-click="showCart()">
 		<span class="glyphicon glyphicon-shopping-cart"></span> Cart
-		<span ng-show="totalQuantity">({{totalQuantity}})</span>
+		<span ng-bind="totalQuantity" ng-model="totalQuantity"><span>&#40;</span>{{totalQuantity}}<span>&#41;</span></span>
 	</a>
 </div>

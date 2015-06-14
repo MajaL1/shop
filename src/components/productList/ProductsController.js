@@ -20,12 +20,14 @@ angular.module('app').controller('ProductsController', function($scope, $rootSco
 
   	$scope.addToCart = function(product, quantity){
   		// spremeni stevilo izdelkov desno zgoraj
-
-  		$rootScope.showProductDetail = true;
-
-  		$rootScope.totalQuantity = $scope.quantity|0 + quantity|0;
+     
+  		//$rootScope.showProductDetail = true;
+      console.log("----Add----: ", quantity);
+      console.log("----Add total quantity----: ", $rootScope.totalQuantity);
+  		var tmp = $rootScope.totalQuantity|0 + quantity|0;
+      $rootScope.totalQuantity = tmp;
   		//$rootScope.totalQuantity = 5;
-  		$rootScope.$broadcast('addToCart', product, quantity);
+  		$rootScope.$broadcast('addToCart',product,  tmp);
 
 
   	}
